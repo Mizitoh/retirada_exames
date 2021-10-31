@@ -37,10 +37,10 @@ public class InicioCaderno {
 			String exm = teclado.next();
 			
 			System.out.println("Digite o nome do paciente: \n");
-			String nome = teclado.next();
+			String nome = teclado.nextLine();
 			
 			System.out.println("Digite nome de quem retirou: \n");
-			String retirada = teclado.next();
+			String retirada = teclado.nextLine();
 			
 			String sql = "INSERT INTO entrega (data, exame, nome, recebedor) VALUES (?, ?, ?, ?)";
 			
@@ -84,7 +84,7 @@ public class InicioCaderno {
 		}
 		default:
 			parametro = 0;
-			System.out.println("Você não saiu do sistema");
+			System.out.println("Você saiu do sistema");
 			break;
 		}
 	} while (parametro != 0);
